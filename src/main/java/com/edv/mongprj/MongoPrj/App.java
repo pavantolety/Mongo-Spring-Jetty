@@ -133,7 +133,7 @@ public class App {
             DBCursor cursor = coll.find();
             List<BasicDBObject> configList = new ArrayList<BasicDBObject>();
             
-            while (cursor.hasNext()) 
+            if (cursor.hasNext()) 
             {
             	configList.add((BasicDBObject) cursor.next());         
             }
