@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Maven + Spring MVC {$hello}</title>
+<title>Maven + Spring MVC</title>
 
 </head>
 
