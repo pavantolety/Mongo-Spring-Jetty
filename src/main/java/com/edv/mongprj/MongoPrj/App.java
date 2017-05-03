@@ -133,7 +133,7 @@ public class App {
             DBCursor cursor = coll.find();
             List<BasicDBObject> configList = new ArrayList<BasicDBObject>();
             
-            if (cursor.hasNext()) 
+            while (cursor.hasNext()) 
             {
             	configList.add((BasicDBObject) cursor.next());         
             }
@@ -208,7 +208,7 @@ public class App {
 			
 			DBCursor cursor = table.find(whereQuery);
             
-			while (cursor.hasNext()) 
+			if (cursor.hasNext()) 
             {
             	 System.out.println(cursor.next()); 
             	 modelMap.put("structure",cursor.next());
