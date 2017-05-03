@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Maven + Spring MVC</title>
+<title>Maven + Spring MVC {$hello}</title>
 
 </head>
 
@@ -22,14 +22,36 @@
   <div class="container">
 	<br>
    <div>
+   		Mr./Ms./Miss. <h4 id="name"></h4>
 		<div>
 			<table>
-				<th></th>
-				<th></th>
+				<tr>
+				<td><b>Component</b></td>
+				<td><b>Salary Structure ${structure.type}</b><td>
+				</tr>
+				<tr>
+					<td>Basic</td>
+					<td>${structure.basic} % of CTC</td>					
+				</tr>
+				<tr>
+					<td>HRA</td>
+					<td>${structure.hra} % of CTC</td>					
+				</tr>
+				<tr>
+					<td>Conveyance Allowance</td>
+					<td>${structure.conv_allowance}</td>					
+				</tr>
+				<tr>
+					<td>Medical Allowance</td>
+					<td>${structure.med_allowance}</td>					
+				</tr>
+				<tr>
+					<td>Special Allowance</td>
+					<td>${structure.specialAllowances}</td>					
+				</tr>
 			</table>			
-			<c:out value="${structure.type}" />
 			<br>
-			<button type="button" onclick="saveConfig()">Submit</button>
+			<button type="button" onclick="generatePdf()">Generate Pdf</button>
 		</div>
     </div>
   </div>
@@ -55,6 +77,10 @@
 			}
 		}); */
 	});
+	
+	function generatePdf(){
+		
+	}
 </script>
 </body>
 </html>
