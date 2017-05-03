@@ -206,12 +206,12 @@ public class App {
 			BasicDBObject whereQuery = new BasicDBObject();
 			whereQuery.put("_id", new ObjectId(_id));
 			
-			DBCursor cursor = table.find(whereQuery);
+			DBObject dbObj = table.findOne(whereQuery);
             
-			if (cursor.hasNext()) 
+			if (dbObj != null) 
             {
-            	 System.out.println(cursor.next()); 
-            	 modelMap.put("structure",cursor.next());
+            	 System.out.println(dbObj); 
+            	 modelMap.put("structure",dbObj);
             }
 			
 		} catch (UnknownHostException e) {
