@@ -44,21 +44,6 @@
 <script src="${bootstrapJs}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-/* 	$(document).ready(function(){
-		$.ajax({            	  
-			type : "GET",
-			url : "/getConfig",
-			dataType : "json",          
-			success : function(data) {
-			  //alert(JSON.stringify(data));
-			  //var config = data.
-			  //location.reload();               	  
-			}, error : function (data){
-			 // alert(JSON.stringify(data));                	  
-			}
-		});
-	});
- */	
 	function saveConfig(){
 		 var obj = {
 			firstName: $("#firstName").val(),
