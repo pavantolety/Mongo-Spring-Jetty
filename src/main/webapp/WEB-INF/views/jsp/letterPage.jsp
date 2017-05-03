@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Maven + Spring MVC {$hello}</title>
+<title>Maven + Spring MVC</title>
 
 </head>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
 	<div class="navbar-header">
-		<form class="navbar-brand" action="/saveConfig" method="POST">
-			<button type="submit">Spring 3 MVC Project</button>
+		<form class="navbar-brand" action="#" method="POST">
+			<button type="submit">Letter Page</button>
 		</form>
 	</div>
   </div>
@@ -22,7 +22,11 @@
   <div class="container">
 	<br>
    <div>
-		<div>			
+		<div>
+			<table>
+				<th></th>
+				<th></th>
+			</table>			
 			<c:out value="${structure.type}" />
 			<br>
 			<button type="button" onclick="saveConfig()">Submit</button>
@@ -33,11 +37,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-	/* $(document).ready(function(){
+ $(document).ready(function(){
 	alert();
 	var obj = localStorage.getItem("object");
 	alert(obj);
-		$.ajax({            	  
+		/* $.ajax({            	  
 			type : "GET",
 			url : "/viewStructure",
 			dataType : "json",  
@@ -49,8 +53,8 @@
 			}, error : function (data){
 			 // alert(JSON.stringify(data));                	  
 			}
-		});
-	}); */
+		}); */
+	});
 </script>
 </body>
 </html>
